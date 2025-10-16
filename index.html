@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card | HNG Stage 0</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <article data-testid="test-profile-card" class="profile-card">
+        <figure class="profile-avatar">
+          <img
+            src="https://i.pravatar.cc/150?img=12"
+            alt="Profile picture of User"
+            data-testid="test-user-avatar"
+          />
+        </figure>
+
+        <section class="profile-info">
+          <header>
+            <h2 data-testid="test-user-name">User</h2>
+          </header>
+
+          <p data-testid="test-user-bio">
+            Frontend developer passionate about creating responsive, accessible,
+            and beautiful user experiences with HTML, CSS, and JavaScript.
+          </p>
+
+          <p>
+            <strong>Current Time (ms):</strong>
+            <span data-testid="test-user-time" id="currentTime"></span>
+          </p>
+
+          <nav
+            aria-label="Social media links"
+            data-testid="test-user-social-links"
+          >
+            <ul>
+              <li>
+                <a
+                  href="https://twitter.com/user"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-twitter"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/user"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-github"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com/in/user"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-linkedin"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <section>
+            <h3>Hobbies</h3>
+            <ul data-testid="test-user-hobbies">
+              <li>Coding</li>
+              <li>Photography</li>
+              <li>Reading</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Dislikes</h3>
+            <ul data-testid="test-user-dislikes">
+              <li>Procrastination</li>
+              <li>Unoptimized code</li>
+              <li>Noise</li>
+            </ul>
+          </section>
+        </section>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
