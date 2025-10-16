@@ -10,7 +10,7 @@ A responsive profile card built with semantic HTML, CSS and vanilla Javascript
 
 ## Live Demo
 
-Hosted on:
+Hosted on: https://hng-stage0-profilecard.netlify.app/
 
 ## How to Run Locally
 
