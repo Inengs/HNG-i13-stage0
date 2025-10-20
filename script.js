@@ -2,7 +2,9 @@ const timeElement = document.getElementById("currentTime");
 const form = document.getElementById("contactForm");
 
 function updateTime() {
-  timeElement.textContent = Date.now();
+  if (timeElement) {
+    timeElement.textContent = Date.now();
+  }
 }
 
 updateTime();
@@ -11,6 +13,7 @@ setInterval(updateTime, 1000);
 if (form) {
   form.addEventListener("submit", (event) => {
     event.preventDefault(); // stop default submission
+    console.log("Submit clicked, page should NOT refresh");
     let valid = true;
 
     // Get field values

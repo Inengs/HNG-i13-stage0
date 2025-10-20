@@ -1,196 +1,355 @@
-/* Base Styles */
+/* ------------------------------ */
+/* 🌐 BASE STYLES - RESET DEFAULTS */
+/* ------------------------------ */
+
+/* Reset default margin, padding, and box model behavior */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Set global font, background, and general layout for the page */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9fafb;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 1rem;
+  background-color: #f9fafb; /* Light grey background */
+  color: #333; /* Dark text color for readability */
+  display: flex; /* Use flex layout for the body */
+  flex-direction: column; /* Stack navbar on top, then content */
+  justify-content: flex-start; /* Align items at the top of the page */
+  align-items: center; /* Center contents horizontally */
+  min-height: 100vh; /* Ensure body fills full viewport height */
+  padding: 1rem; /* Add spacing inside body edges */
 }
+
+/* ------------------------------------------ */
+/* HEADER   */
+/* ------------------------------------------ */
+
+.header {
+  position: fixed; /* Sticks header to the top*/
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Keeps it above other elements */
+}
+
+/* Header Navbar Links */
+.header .navbar a {
+  color: white; /* White text */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make it bold */
+  transition: color 0.3s;
+}
+
+/* Hover effect */
+.header .navbar a:hover,
+.header .navbar a:focus {
+  color: #007bff; /* Change color on hover/focus */
+  text-decoration: none; /* Keep no underline */
+  outline: none; /* Remove focus outline if desired */
+}
+
+/* ------------------------------------------ */
+/* 💳 PROFILE CARD - MAIN CONTAINER STYLING   */
+/* ------------------------------------------ */
 
 .profile-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 2rem;
-  max-width: 600px;
-  width: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 90px;
+  display: flex; /* Flex layout for internal elements */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center avatar and text */
+  background: #fff; /* White background for the card */
+  border-radius: 16px; /* Rounded corners for a soft look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+  padding: 2rem; /* Inner spacing */
+  max-width: 600px; /* Restrict maximum width */
+  width: 100%; /* Responsive full width on small screens */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
 
+/* Add subtle lift and stronger shadow when hovering */
 .profile-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Avatar */
+/* ------------------------------------------ */
+/* 🧍 AVATAR IMAGE STYLING                    */
+/* ------------------------------------------ */
+
 .profile-avatar img {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 3px solid #007bff;
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Crop image neatly inside circle */
+  margin-bottom: 1rem; /* Add spacing below the avatar */
+  border: 3px solid #2b2d42; /* Blue border around the avatar */
 }
 
-/* Text Info */
+/* ------------------------------------------ */
+/* 🧾 PROFILE INFORMATION TEXT STYLING        */
+/* ------------------------------------------ */
+
 .profile-info {
-  text-align: center;
+  text-align: center; /* Center-align text within the profile */
 }
 
+/* User's name */
 .profile-info h2 {
   font-size: 1.8rem;
-  color: #007bff;
-  margin-bottom: 0.5rem;
+  color: #2b2d42; /* Blue color for name */
+  margin-bottom: 0.5rem; /* Space below the name */
 }
 
+/* User's bio and other text */
 .profile-info p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  margin-bottom: 1rem; /* Add spacing between paragraphs */
+  line-height: 1.6; /* Improve readability */
 }
 
-/* Social Links */
-nav ul {
+/* ------------------------------------------ */
+/* 🌍 SOCIAL MEDIA LINKS STYLING              */
+/* ------------------------------------------ */
+
+/* Remove bullet points, align links horizontally, and center them */
+.profile-info nav ul {
   list-style: none;
+  padding-left: 0;
+  margin: 0;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1rem; /* Add space between links */
   margin-bottom: 1rem;
 }
 
+/* Style for each link */
 nav a {
-  color: #007bff;
-  text-decoration: none;
+  color: #007bff; /* Default blue color */
+  text-decoration: none; /* Remove underlines */
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s; /* Smooth hover color change */
 }
 
+/* Hover and focus states for accessibility */
 nav a:hover,
 nav a:focus {
-  color: #0056b3;
+  color: #0056b3; /* Darker blue on hover/focus */
   outline: none;
 }
 
-/* Lists (Hobbies & Dislikes) */
+/* ------------------------------------------ */
+/* 📋 HOBBIES & DISLIKES LISTS                */
+/* ------------------------------------------ */
+
 section ul {
-  list-style: disc;
-  padding-left: 1.5rem;
+  list-style: disc; /* Use default bullet style */
+  padding-left: 1.5rem; /* Indent bullets for readability */
   text-align: left;
   margin-bottom: 1rem;
 }
 
-/* Navbar */
+/* ------------------------------------------ */
+/* 🧭 NAVBAR STYLING                          */
+/* ------------------------------------------ */
+
 .navbar {
-  background-color: #2b2d42;
+  background-color: #2b2d42; /* Dark navy background */
   padding: 1rem;
-  text-align: center;
+  text-align: center; /* Center the menu items */
 }
+
+/* Remove bullets from navbar list */
 .navbar ul {
   list-style: none;
   padding: 0;
 }
+
+/* Display links inline horizontally with spacing */
 .navbar li {
   display: inline;
   margin: 0 10px;
 }
+
+/* Style navbar links */
 .navbar a {
-  color: white;
-  text-decoration: none;
+  color: white; /* White text */
+  text-decoration: none; /* No underline */
   font-weight: bold;
 }
+
+/* Add underline when hovered */
 .navbar a:hover {
   text-decoration: underline;
 }
 
-/* Card */
-.card {
-  text-align: center;
-  background: white;
-  padding: 20px;
-  margin: 40px auto;
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* ------------------------------------------ */
+/* ABOUT PAGE */
+/* ------------------------------------------ */
+
+main.about-card {
+  margin-top: 100px; /* To avoid overlapping fixed navbar */
+  max-width: 800px;
+  width: 90%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  line-height: 1.7;
 }
 
-/* Form */
-form {
-  max-width: 400px;
-  margin: 40px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.about-card section {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
 }
+
+.about-card h2 {
+  color: #2b2d42;
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-card p,
+.about-card li {
+  font-size: 1rem;
+  color: #444;
+}
+/* ------------------------------------------ */
+/* 📮 CONTACT FORM STYLING                    */
+/* ------------------------------------------ */
+
+form {
+  margin-top: 100px; /* To avoid overlapping fixed navbar */
+  max-width: 800px;
+  width: 90%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  line-height: 1.7;
+}
+
+/* Error messages */
+.error {
+  color: #ff4d4f; /* Bright red */
+  font-size: 0.9rem; /* Slightly bigger */
+  margin-top: 4px; /* Space from input */
+  font-weight: 500; /* Make it bolder */
+}
+
+/* Success messages */
+.success {
+  color: #28a745; /* Bright green */
+  font-size: 1rem;
+  margin-top: 10px; /* Space from submit button */
+  font-weight: bold;
+  text-align: center; /* Centered message */
+}
+
+/* Hide elements */
+.hidden {
+  display: none;
+}
+
+/* Label styling above each input */
 label {
   display: block;
   margin-top: 10px;
 }
+
+/* Inputs, textareas, and buttons styling */
 input,
-textarea,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4); /* Semi-transparent grey */
+  font-style: italic;
+  transition: all 0.2s ease-in-out;
+}
+
+/* When input is focused, make placeholder disappear or lighten */
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent; /* Placeholder disappears when typing */
+}
+
+/* Button styles */
 button {
+  margin-top: 15px;
+  background-color: #2b2d42; /* Dark background */
+  color: white;
+  border: none;
+  cursor: pointer;
   width: 100%;
   padding: 8px;
   margin-top: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-button {
-  margin-top: 15px;
-  background-color: #2b2d42;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+
+/* Button hover effect */
 button:hover {
   background-color: #4c5270;
 }
-.error {
-  color: red;
-  font-size: 0.85em;
-}
-.success {
-  color: green;
-  font-weight: bold;
-}
-.hidden {
-  display: none;
-}
 
-/* Responsive Design */
+/* ------------------------------------------ */
+/* 📱 RESPONSIVE DESIGN (TABLET & DESKTOP)    */
+/* ------------------------------------------ */
+
 @media (min-width: 768px) {
+  /* Make profile layout horizontal on larger screens */
   .profile-card {
-    flex-direction: row;
+    flex-direction: row; /* Avatar beside text */
     align-items: flex-start;
     text-align: left;
     gap: 2rem;
   }
 
   .profile-avatar {
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevent avatar from shrinking */
   }
 
   .profile-info {
-    flex: 1;
+    flex: 1; /* Allow text section to fill remaining space */
   }
 }
 
-/* Responsive Design */
+/* ------------------------------------------ */
+/* 📱 RESPONSIVE DESIGN (MOBILE DEVICES)      */
+/* ------------------------------------------ */
+
 @media (max-width: 600px) {
+  /* Make cards and forms responsive on smaller screens */
   .card,
   form {
-    width: 90%;
+    width: 90%; /* Take most of the screen width */
     margin: 20px auto;
+  }
+  main {
+    margin-top: 110px; /* More space for stacked navbar */
+  }
+  .profile-card {
+    margin-top: 110px; /* More space for stacked navbar */
+  }
+  .about-card {
+    width: 95%;
+    padding: 1.5rem;
+    margin-top: 120px;
   }
 }

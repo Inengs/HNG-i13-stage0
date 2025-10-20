@@ -8,16 +8,18 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
+    <header class="header">
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main data-testid="test-about-page">
-      <section data-testid="test-about-bio">
+    <main data-testid="test-about-page" class="about-card">
+      <section data-testid="test-about-bio" class="about-bio">
         <h2>My Bio</h2>
         <p>
           I’m Emmanuel, a mechatronics student passionate about web technologies
@@ -25,7 +27,7 @@
         </p>
       </section>
 
-      <section data-testid="test-about-goals">
+      <section data-testid="test-about-goals" class="about-goals">
         <h2>Goals in This Program</h2>
         <ul>
           <li>Improve my frontend development skills</li>
@@ -34,7 +36,7 @@
         </ul>
       </section>
 
-      <section data-testid="test-about-confidence">
+      <section data-testid="test-about-confidence" class="about-confidence">
         <h2>Areas of Low Confidence</h2>
         <p>
           I’m still working on mastering advanced JavaScript logic and
@@ -42,7 +44,7 @@
         </p>
       </section>
 
-      <section data-testid="test-about-future-note">
+      <section data-testid="test-about-future-note" class="about-future-note">
         <h2>Note to Future Self</h2>
         <p>
           Stay consistent. Keep learning. Never underestimate small daily
@@ -50,7 +52,7 @@
         </p>
       </section>
 
-      <section data-testid="test-about-extra">
+      <section data-testid="test-about-extra" class="about-extra">
         <h2>Extra Thoughts</h2>
         <p>
           This journey is exciting — every line of code is a step closer to
