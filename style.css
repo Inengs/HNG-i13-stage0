@@ -90,6 +90,84 @@ section ul {
   margin-bottom: 1rem;
 }
 
+/* Navbar */
+.navbar {
+  background-color: #2b2d42;
+  padding: 1rem;
+  text-align: center;
+}
+.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+.navbar li {
+  display: inline;
+  margin: 0 10px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Card */
+.card {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  margin: 40px auto;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+form {
+  max-width: 400px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+label {
+  display: block;
+  margin-top: 10px;
+}
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  margin-top: 15px;
+  background-color: #2b2d42;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #4c5270;
+}
+.error {
+  color: red;
+  font-size: 0.85em;
+}
+.success {
+  color: green;
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+
 /* Responsive Design */
 @media (min-width: 768px) {
   .profile-card {
@@ -105,5 +183,14 @@ section ul {
 
   .profile-info {
     flex: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .card,
+  form {
+    width: 90%;
+    margin: 20px auto;
   }
 }

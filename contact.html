@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <form id="contactForm" novalidate>
+        <h2>Contact Us</h2>
+
+        <!-- Full Name -->
+        <label for="name">Full Name:</label>
+        <input
+          id="name"
+          data-testid="test-contact-name"
+          type="text"
+          aria-describedby="error-name"
+        />
+        <span
+          id="error-name"
+          data-testid="test-contact-error-name"
+          class="error"
+        ></span>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input
+          id="email"
+          data-testid="test-contact-email"
+          type="email"
+          aria-describedby="error-email"
+        />
+        <span
+          id="error-email"
+          data-testid="test-contact-error-email"
+          class="error"
+        ></span>
+
+        <!-- Subject -->
+        <label for="subject">Subject:</label>
+        <input
+          id="subject"
+          data-testid="test-contact-subject"
+          type="text"
+          aria-describedby="error-subject"
+        />
+        <span
+          id="error-subject"
+          data-testid="test-contact-error-subject"
+          class="error"
+        ></span>
+
+        <!-- Message -->
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          data-testid="test-contact-message"
+          aria-describedby="error-message"
+        ></textarea>
+        <span
+          id="error-message"
+          data-testid="test-contact-error-message"
+          class="error"
+        ></span>
+
+        <!-- Submit -->
+        <button type="submit" data-testid="test-contact-submit">Submit</button>
+
+        <!-- Success Message -->
+        <p
+          id="success"
+          data-testid="test-contact-success"
+          class="success hidden"
+        >
+          ✅ Message sent successfully!
+        </p>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
